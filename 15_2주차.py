@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 
 #x_years = ['2020', '2021', '2022']
 #y_data = [100, 400, 900]
+#clr = ["r","g","b"]
 
 #막대 문양 채우기
 #plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="/")
@@ -11,25 +12,41 @@ import matplotlib.pyplot as plt
 #plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="*")
 #plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch=".")
 
-#===========선점도 그래프 그리기==================== 부족
+#===========선점도 그래프 그리기==================== 
 
-#x = ['2020', '2021', '2022']
-#y = [100, 400, 900]
+#x = 1
+#y = 1
 
-#plt.scatter(1, 1)
-#plt.scatter(x+1.5, y+1.5, 100, 2, alpah=0.5)
+#plt.scatter(x, y)
+#plt.scatter(x+1, y+1)
+#plt.scatter(x+2, y+1)
+#plt.scatter(x+3, y+1)
+#plt.scatter(x+3, y+2)
+#plt.scatter(x+3, y+3)
+#plt.scatter(x+3, y+4)
+#plt.scatter(x+4, y+1)
+#plt.scatter(x+4, y+2)
+#plt.scatter(x+4, y+3)
+#plt.scatter(x+4, y+4)
+
+#plt.scatter(x+1.5, y+1.5, 100, "C1")
+#plt.scatter(x+2.5, y+1.5, 150, "red")
+#plt.scatter(x+3.5, y+1.5, 200, 4)
 
 #컬러맵 설정
 #plt.scatter(x+4.5, y+1.5, 200, 4, alpha=0.5, cmap="cividis")
+# plt.scatter(x+4.5, y+1.5, 200, 4, alpha=0.5, cmap="inferno")
+# plt.scatter(x+4.5, y+1.5, 200, 4, alpha=0.5, cmap="magma")
+# plt.scatter(x+4.5, y+1.5, 200, 4, alpha=0.5, cmap="cividis")
+
 #plt.colorbar()
 
-#==============히스토그램 도수 분표========= 부족
+#==============히스토그램 도수 분표========= 
 import numpy as np
 
-#rn = np.randaom.
-
-#plt.hist(rn, bins=10)
-#plt.legend()
+#rn= np.random.randint(1,30,size=20)
+#print(rn)
+#plt.hist(rn, bins=10, label="def")
 
 #그래프 스타일 설정
 # 라벨 설정
@@ -40,6 +57,10 @@ import numpy as np
 
 # 그래프 스타일 설정
 #plt.hist(rn,  bins=10, label="def", alpha=0.5, histtype="step")
+#plt.hist(rn,  bins=30, label="def", alpha=0.5, histtype="stepfilled")
+# plt.hist(rn,  bins=10, label="def", alpha=0.5, histtype="barstacked")
+
+#plt.legend()
 
 #===========파이챠트 그리기====================
 #rate = [30, 40, 20, 10]
@@ -135,7 +156,6 @@ ax[0][0].plot(x, y1)
 # ~
 ax[1][1].plot(x, y1) """
 
-
 #축 공유
 """ fig, ax = plt.subplots(2, 2, sharex=True)
 fig, ax = plt.subplots(2, 2, sharey=True) """
@@ -184,27 +204,7 @@ ax2.set_ylabel("Y2data")
 
 
 #라벨
-ax1.plot(x, y1, "-o", color="C1", label="XData")
-# ~
-ax2.bar(x, y2, color="C2", label="YData")
-# ~
+#ax1.legend(loc="upper left")
+#ax2.legend(loc="lower left")
+"""
 
-ax1.legend()
-ax2.legend() """
-
-
-#==========다중 그래프 출력==================
-# 사용데이터
-""" x1 = [2,3,6,7,10]
-x2 = [1,4,5,8,9]
-
-y1 = [1,4,5,8,9]
-y2 = [2,4,6,8,10]
-
-plt.subplot(2, 1, 1)    # 1set
-plt.plot(x1, y1, "o-")
-
-plt.subplot(2, 1, 2)
-plt.plot(x2, y2, ".-")
- """
-plt.show()
